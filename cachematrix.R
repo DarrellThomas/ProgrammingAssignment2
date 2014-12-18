@@ -22,7 +22,7 @@
 # The calling function, called cacheSolve().
 
 
-makeCacheMatrix <- function(x) {
+makeCacheMatrix <- function(x = matrix()) {
   
   
 # my_inverse is the 'inverse' and it is initialized to NULL at every call
