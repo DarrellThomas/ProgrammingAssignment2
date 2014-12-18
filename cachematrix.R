@@ -13,7 +13,7 @@
 
 #=======================================================================
 # makeCacheMatrix() takes x as input, (a numeric matrix). By 
-# creating a matrix with makeCacheVector(), not only
+# creating a matrix with makeCacheMatrix(), not only
 # does it "make" the matrix, it attaches these additional
 # functions (objects) to be used later. 
 # To use a Christmas analogy, think of the vector itself as the 
@@ -33,9 +33,9 @@ makeCacheMatrix <- function(x = matrix()) {
 
   
 # note these next three functions are defined, but not called 
-# anywhere here... they are used later in cachemean() to get 
-# values for x, or for m (mean), and for setting and storing the
-# mean. To access these functions from elsewhere, one way is to 
+# anywhere here... they are used later in cacheSolve() to get 
+# values for x, or for my_inverse, and for setting and storing the
+# inverse. To access these functions from elsewhere, one way is to 
 # use the following  format to access the list created below:
 #
 #  z <- x$getinverse()
