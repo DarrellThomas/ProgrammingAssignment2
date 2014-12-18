@@ -1,3 +1,9 @@
+## Darrell Thomas
+## December 2014
+## Coursera.org
+
+
+
 ## Put comments here that give an overall description of what your
 ## functions do
 
