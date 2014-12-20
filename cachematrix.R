@@ -93,7 +93,7 @@ cacheSolve <- function(x, ...) {
   
   my_inverse <- x$getinverse()
   
-  # if mean was already cached (not NULL)
+  # if inverese was already cached (not NULL)
   
   if(!is.null(my_inverse)) {
     
@@ -101,25 +101,25 @@ cacheSolve <- function(x, ...) {
     
     message("getting cached data")
     
-    # and return the cached value of m, as previously 
-    # collected by getmean()
+    # and return the cached value of my_inverse, as previously 
+    # collected by getinverse()
     
     return(my_inverse)
   }
   
-  # This section of code would only be run if the mean 
+  # This section of code would only be run if the inverse 
   # were NULL. So, first, let's go get the data from 
-  # the function created with makeVector()
+  # the function created with cachematrix()
   
   data <- x$getmatrix()
   
-  # Now, use that vector to calculate the mean.  This 
+  # Now, use that vector to calculate the inverse.  This 
   # is where the actual calculation takes place. **finally**!
   
   my_inverse <- solve(data, ...)
   
-  # Now that we have a calculated (non-NULL) value for 
-  # let's push it to the cache, by using the setmean()
+  # Now that we have a calculated (non-NULL) value for my_inverse
+  # let's push it to the cache, by using the setinverse()
   # function. 
   
   x$setinverse(my_inverse)
